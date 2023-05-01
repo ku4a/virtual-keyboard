@@ -1,7 +1,7 @@
 export class Screen {
 
     constructor() {
-        console.log("Screen");
+        //console.log("Screen");
         let textarea = document.createElement('textarea');
         textarea.className = "screen";
         textarea.setAttribute("rows", 5);
@@ -71,5 +71,18 @@ export class Screen {
 
     actionEnter() {
         document.querySelector(".screen").value += "\r\n";
+    }
+
+    actionTab() {
+        let screen = document.querySelector(".screen");
+
+        let start = screen.selectionStart;
+        let end = screen.selectionEnd;
+
+        // set textarea value to: text before caret + tab + text after caret
+        screen.value = screen.value.substring(0, start) + "    " + screen.value.substring(end);
+
+        // put caret at right position again
+        screen.selectionStart = screen.selectionEnd = start + 4;
     }
 }

@@ -83,12 +83,13 @@ export class Keyboard {
             if (this.modShift || this.modCapslock) {
                 keyDiv.innerHTML = keyJson.shiftKey[this.lang]
             } else if (this.modCtrl) {
-                console.log('Ctrl')
+                //console.log('Ctrl')
                 keyDiv.innerHTML = keyJson.ctrlKey[this.lang]
             } else if (this.modAlt) {
-                console.log('alt')
+                //console.log('alt')
                 keyDiv.innerHTML = keyJson.altKey[this.lang]
             } else {
+                console.log(keyJson.clean[this.lang]);
                 keyDiv.innerHTML = keyJson.clean[this.lang]
             }
 

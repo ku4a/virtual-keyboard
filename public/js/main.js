@@ -37,6 +37,9 @@ document.addEventListener("keydown", function (event) {
             case "backspace":
                 screen.actionBackspace();
                 break;
+            case "tab":
+                screen.actionTab();
+                break;
             case "delete":
                 screen.actionDelete();
                 break;
@@ -45,6 +48,14 @@ document.addEventListener("keydown", function (event) {
                 keyboard.refresh();
                 break;
             case "shiftLeft":
+                if (keyboard.getModCtrl()) {
+                    keyboard.switchLang();
+                } else {
+                    keyboard.modShift = 1;
+                }
+                keyboard.refresh();
+                break;
+            case "shiftRight":
                 if (keyboard.getModCtrl()) {
                     keyboard.switchLang();
                 } else {
@@ -103,6 +114,10 @@ document.addEventListener("keyup", function (event) {
                 keyboard.refresh();
                 break;
             case "shiftLeft":
+                keyboard.modShift = 0;
+                keyboard.refresh();
+                break;
+            case "shiftRight":
                 keyboard.modShift = 0;
                 keyboard.refresh();
                 break;
