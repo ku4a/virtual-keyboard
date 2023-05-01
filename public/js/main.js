@@ -1,15 +1,20 @@
 import {Screen} from './screen.js';
 import {Keyboard} from './keyboard.js';
 
-fetch('public/json/mac-keabord.json').then(res => res.json()).then(symbols => {
+let screen = new Screen;
+let keyboard = new Keyboard;
 
-    //console.log(symbols.find(el => el.row === 1));
-    symbols.forEach(function(item) {
-        if (item.row === 1) {
-            console.log(item.code);
-        }
-    });
-})
+document.addEventListener("keydown", function (event) {
+    //console.log("event.code = " + event.code);
 
-new Screen;
-new Keyboard;
+    if (keyboard.getSymbol(event.code)) {
+        screen.addSymbol(keyboard.getSymbol(event.code));
+        keyboard.animationAdd(event.code);
+    }
+});
+
+document.addEventListener("keyup", function (event) {
+    if (keyboard.getSymbol(event.code)) {
+        keyboard.animationRemove(event.code);
+    }
+});
