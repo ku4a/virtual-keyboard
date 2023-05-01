@@ -82,7 +82,7 @@ body {
     border-radius: 50px
 }
 
-.keyboard .AltLeft, .keyboard .AltRight, .keyboard .ArrowUp, .keyboard .ArrowLeft, .keyboard .ArrowDown, .keyboard .ArrowRight, .keyboard .backspace, .keyboard .capsLock, .keyboard .ControlLeft, .keyboard .ControlRight, .keyboard .Delete, .keyboard .Enter, .keyboard .ShiftLeft, .keyboard .ShiftRight, .keyboard .tab, .keyboard .MetaLeft {
+.keyboard .altleft, .keyboard .AltRight, .keyboard .ArrowUp, .keyboard .arrowleft, .keyboard .Arrowdown, .keyboard .arrowright, .keyboard .backspace, .keyboard .capsLock, .keyboard .controlleft, .keyboard .controlright, .keyboard .delete, .keyboard .enter, .keyboard .ShiftLeft, .keyboard .ShiftRight, .keyboard .tab, .keyboard .metaleft, .keyboard .metaright {
     font-weight: 600;
     background-color: #222222
 }
@@ -95,14 +95,14 @@ body {
     width: 100px
 }
 
-.keyboard .Delete {
-    width: 44px
+.keyboard .delete {
+    width: 90px
 }
 
-.keyboard .Enter, .keyboard .ShiftRight {
+.keyboard .enter, .keyboard .ShiftRight {
     width: 86px
 }
 
-.keyboard .Space {
+.keyboard .space {
     width: 330px
 }

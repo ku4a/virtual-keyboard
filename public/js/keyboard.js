@@ -2,12 +2,18 @@ export class Keyboard {
     lang = localStorage.getItem('lang') === null ? 0 : localStorage.getItem('lang');
     symbols = [];
 
-    modShift = 0;
     modCapslock = 0;
+    modShift = 0;
+    modCtrl = 0;
+    modMeta = 0;
+    modAlt = 0;
+
 
 
     constructor() {
-        const LANG = this.lang;
+        const LANG = parseInt(this.lang);
+
+
 
         let keyboard = document.createElement('div');
         keyboard.className = "keyboard";
@@ -26,7 +32,7 @@ export class Keyboard {
                 symbols.forEach(function (item) {
                     if (item.row === i) {
                         //console.log(item.code);
-
+                        //console.log("lang = " + LANG);
                         let keyboard_key = document.createElement('div');
                         keyboard_key.innerHTML = item.clean[LANG];
                         keyboard_key.className = item.style;
@@ -36,7 +42,6 @@ export class Keyboard {
                     }
                 });
             }
-            11
 
         })
 
@@ -64,7 +69,7 @@ export class Keyboard {
     }
 
     refresh() {
-        console.log("refresh");
+        //console.log("refresh");
         let keys = document.querySelectorAll(".normal");
         let keyJson = '';
         let keyDiv = {};
@@ -75,10 +80,16 @@ export class Keyboard {
             keyJson = this.symbols.find(el => el.code === key.dataset.code);
             keyDiv = document.querySelector("[data-code = '" + key.dataset.code + "']");
 
-            if (this.modShift) {
-                keyDiv.innerHTML = keyJson.shiftKey[0]
+            if (this.modShift || this.modCapslock) {
+                keyDiv.innerHTML = keyJson.shiftKey[this.lang]
+            } else if (this.modCtrl) {
+                console.log('Ctrl')
+                keyDiv.innerHTML = keyJson.ctrlKey[this.lang]
+            } else if (this.modAlt) {
+                console.log('alt')
+                keyDiv.innerHTML = keyJson.altKey[this.lang]
             } else {
-                keyDiv.innerHTML = keyJson.clean[0]
+                keyDiv.innerHTML = keyJson.clean[this.lang]
             }
 
         }
@@ -89,4 +100,38 @@ export class Keyboard {
         return this.modShift;
     }
 
+    getModCapslock() {
+        return this.modCapslock;
+    }
+
+    getModShift() {
+        return this.modShift;
+    }
+
+    getModCtrl() {
+        return this.modCtrl;
+    }
+    getModAlt() {
+        return this.modAlt;
+    }
+
+    getModMeta() {
+        return this.modMeta;
+    }
+
+    getLang() {
+        return this.lang;
+    }
+
+    switchLang(){
+        //this.lang === 0 ? this.lang = 1 : this.lang = 0;
+        if (parseInt(this.lang) === 0) {
+            this.lang = 1;
+        } else {
+            this.lang = 0;
+        }
+        //console.log("switch lang = " + this.lang);
+        localStorage.setItem("lang", this.lang);
+        //console.log(localStorage.getItem('lang'));
+    }
 }
