@@ -82,16 +82,16 @@ body {
     border-radius: 50px
 }
 
-.keyboard .AltLeft, .keyboard .AltRight, .keyboard .ArrowUp, .keyboard .ArrowLeft, .keyboard .ArrowDown, .keyboard .ArrowRight, .keyboard .backspace, .keyboard .CapsLock, .keyboard .ControlLeft, .keyboard .ControlRight, .keyboard .Delete, .keyboard .Enter, .keyboard .ShiftLeft, .keyboard .ShiftRight, .keyboard .Tab, .keyboard .MetaLeft {
+.keyboard .AltLeft, .keyboard .AltRight, .keyboard .ArrowUp, .keyboard .ArrowLeft, .keyboard .ArrowDown, .keyboard .ArrowRight, .keyboard .backspace, .keyboard .capsLock, .keyboard .ControlLeft, .keyboard .ControlRight, .keyboard .Delete, .keyboard .Enter, .keyboard .ShiftLeft, .keyboard .ShiftRight, .keyboard .tab, .keyboard .MetaLeft {
     font-weight: 600;
     background-color: #222222
 }
 
-.keyboard .Tab {
+.keyboard .tab {
     width: 50px
 }
 
-.keyboard .backspace, .keyboard .CapsLock, .keyboard .ShiftLeft {
+.keyboard .backspace, .keyboard .capsLock, .keyboard .ShiftLeft {
     width: 100px
 }
 

@@ -12,23 +12,9 @@ export class Screen {
     }
 
 
-    action(symbol) {
-        //console.log(symbol);
-        switch(symbol.action) {
-            case "add":
-                this.actionAdd(symbol);
-                break;
-            case "backspace":
-                this.actionBackspace();
-                break;
-            default:
-            break;
-        }
-    }
-
     actionAdd(symbol) {
         //console.log(symbol);
-        document.querySelector(".screen").value += symbol.clean[0];
+        document.querySelector(".screen").value += symbol;
     }
 
 

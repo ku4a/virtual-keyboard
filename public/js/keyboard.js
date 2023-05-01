@@ -2,6 +2,9 @@ export class Keyboard {
     lang = localStorage.getItem('lang') === null ? 0 : localStorage.getItem('lang');
     symbols = [];
 
+    modShift = 0;
+    modCapslock = 0;
+
 
     constructor() {
         const LANG = this.lang;
@@ -20,7 +23,7 @@ export class Keyboard {
                 keyboard_row.className = "row";
                 keyboard.append(keyboard_row);
 
-                symbols.forEach(function(item) {
+                symbols.forEach(function (item) {
                     if (item.row === i) {
                         //console.log(item.code);
 
@@ -32,35 +35,25 @@ export class Keyboard {
                         keyboard_row.append(keyboard_key);
                     }
                 });
-            }11
+            }
+            11
 
         })
-
 
 
         document.body.append(keyboard);
         //this.name = name;
     }
 
-    getLang() {
-        return this.lang;
-    }
 
     getSymbol(code) {
         //console.log(code);
-       //console.log(this.symbols.find(el => el.code === code));
+        //console.log(this.symbols.find(el => el.code === code));
 
         let symbol = this.symbols.find(el => el.code === code);
         return symbol ? symbol : false;
     }
 
-    getAction(code) {
-        //console.log(code);
-        //console.log(this.symbols.find(el => el.code === code));
-
-        let symbol = this.symbols.find(el => el.code === code);
-        return symbol ? symbol.action : false;
-    }
 
     animationAdd(code) {
         document.querySelector("[data-code = '" + code + "']").classList.add("active");
@@ -70,31 +63,30 @@ export class Keyboard {
         document.querySelector("[data-code = '" + code + "']").classList.remove("active");
     }
 
-    actionBackspace(textbox)
-    {
-        let ss = textbox.selectionStart;
-        let se = textbox.selectionEnd;
-        let ln  = textbox.value.length;
+    refresh() {
+        console.log("refresh");
+        let keys = document.querySelectorAll(".normal");
+        let keyJson = '';
+        let keyDiv = {};
 
-        let textbefore = textbox.value.substring( 0, ss );    //text in front of selected text
-        let textselected = textbox.value.substring( ss, se ); //selected text
-        let textafter = textbox.value.substring( se, ln );    //text following selected text
+        for (let key of keys) {
+            //console.log(key.dataset.code + ' = ' + this.symbols.find(el => el.code === key.dataset.code).shiftKey[0]);
 
-        if(ss === se) // if no text is selected
-        {
-            textbox.value = textbox.value.substring(0, ss-1 ) + textbox.value.substring(se, ln );
-            textbox.focus();
-            textbox.selectionStart = ss-1;
-            textbox.selectionEnd = ss-1;
-        }
-        else // if some text is selected
-        {
-            textbox.value = textbefore + textafter ;
-            textbox.focus();
-            textbox.selectionStart = ss;
-            textbox.selectionEnd = ss;
+            keyJson = this.symbols.find(el => el.code === key.dataset.code);
+            keyDiv = document.querySelector("[data-code = '" + key.dataset.code + "']");
+
+            if (this.modShift) {
+                keyDiv.innerHTML = keyJson.shiftKey[0]
+            } else {
+                keyDiv.innerHTML = keyJson.clean[0]
+            }
+
         }
 
+    }
+
+    getModShift() {
+        return this.modShift;
     }
 
 }

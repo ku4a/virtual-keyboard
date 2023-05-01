@@ -7,7 +7,7 @@
     "ctrlKey": ["0", "0"],
     "metaKey": ["§", "§"],
     "shiftKey": ["±", "<"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -18,7 +18,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -29,7 +29,7 @@
     "ctrlKey": ["2", "2"],
     "metaKey": ["2", "2"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -40,7 +40,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -51,7 +51,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -62,7 +62,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -73,7 +73,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -84,7 +84,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -95,7 +95,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -106,7 +106,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -117,7 +117,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -128,7 +128,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -139,7 +139,7 @@
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
     "shiftKey": ["!", "!"],
-    "style": "key",
+    "style": "key normal",
     "action": "add"
   },
   {
@@ -152,5 +152,170 @@
     "shiftKey": ["!", "!"],
     "style": "key backspace",
     "action": "backspace"
+  },
+  {
+    "row": 1,
+    "code": "Tab",
+    "clean": ["Tab", "Tab"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key tab",
+    "action": "tab"
+  },
+  {
+    "row": 1,
+    "code": "KeyQ",
+    "clean": ["q", "q"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["Q", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyW",
+    "clean": ["w", "w"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["W", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyE",
+    "clean": ["e", "e"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["E", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyR",
+    "clean": ["r", "r"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["R", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyT",
+    "clean": ["t", "t"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["T", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyY",
+    "clean": ["y", "y"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["Y", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyU",
+    "clean": ["u", "u"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["U", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyI",
+    "clean": ["i", "i"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["I", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyO",
+    "clean": ["o", "o"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["O", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "KeyP",
+    "clean": ["p", "p"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["P", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "BracketLeft",
+    "clean": ["[", "["],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["{", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 1,
+    "code": "BracketRight",
+    "clean": ["]", "]"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["}", ""],
+    "style": "key normal",
+    "action": "add"
+  },
+  {
+    "row": 2,
+    "code": "CapsLock",
+    "clean": ["CapsLock", "CapsLock"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["", ""],
+    "style": "key capsLock",
+    "action": "capsLock"
+  },
+  {
+    "row": 3,
+    "code": "ShiftLeft",
+    "clean": ["Shift", "Shiftt"],
+    "altKey": ["", ""],
+    "ctrlKey": ["", ""],
+    "metaKey": ["", ""],
+    "shiftKey": ["", ""],
+    "style": "key capsLock",
+    "action": "shiftLeft"
   }
 ]
