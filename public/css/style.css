@@ -1,3 +1,7 @@
+body {
+    font-family: "Trebuchet MS", "Helvetica", sans-serif
+}
+
 .centralizer {
     margin: 0 auto;
     font-family: "Trebuchet MS", "Helvetica", sans-serif
@@ -78,7 +82,7 @@
     border-radius: 50px
 }
 
-.keyboard .AltLeft, .keyboard .AltRight, .keyboard .ArrowUp, .keyboard .ArrowLeft, .keyboard .ArrowDown, .keyboard .ArrowRight, .keyboard .Backspace, .keyboard .CapsLock, .keyboard .ControlLeft, .keyboard .ControlRight, .keyboard .Delete, .keyboard .Enter, .keyboard .ShiftLeft, .keyboard .ShiftRight, .keyboard .Tab, .keyboard .MetaLeft {
+.keyboard .AltLeft, .keyboard .AltRight, .keyboard .ArrowUp, .keyboard .ArrowLeft, .keyboard .ArrowDown, .keyboard .ArrowRight, .keyboard .backspace, .keyboard .CapsLock, .keyboard .ControlLeft, .keyboard .ControlRight, .keyboard .Delete, .keyboard .Enter, .keyboard .ShiftLeft, .keyboard .ShiftRight, .keyboard .Tab, .keyboard .MetaLeft {
     font-weight: 600;
     background-color: #222222
 }
@@ -87,7 +91,7 @@
     width: 50px
 }
 
-.keyboard .Backspace, .keyboard .CapsLock, .keyboard .ShiftLeft {
+.keyboard .backspace, .keyboard .CapsLock, .keyboard .ShiftLeft {
     width: 100px
 }
 

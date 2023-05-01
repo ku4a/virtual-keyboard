@@ -6,7 +6,9 @@
     "altKey": ["§", "§"],
     "ctrlKey": ["0", "0"],
     "metaKey": ["§", "§"],
-    "shiftKey": ["±", "<"]
+    "shiftKey": ["±", "<"],
+    "style": "key",
+    "action": "add"
   },
   {
     "row": 0,
@@ -15,16 +17,20 @@
     "altKey": ["¡", "!"],
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
-    "shiftKey": ["!", "!"]
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
   },
   {
     "row": 0,
     "code": "Digit2",
     "clean": ["2", "2"],
     "altKey": ["¡", "!"],
-    "ctrlKey": ["1", "1"],
-    "metaKey": ["1", "1"],
-    "shiftKey": ["!", "!"]
+    "ctrlKey": ["2", "2"],
+    "metaKey": ["2", "2"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
   },
   {
     "row": 0,
@@ -33,7 +39,9 @@
     "altKey": ["¡", "!"],
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
-    "shiftKey": ["!", "!"]
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
   },
   {
     "row": 0,
@@ -42,15 +50,107 @@
     "altKey": ["¡", "!"],
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
-    "shiftKey": ["!", "!"]
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
   },
   {
     "row": 0,
-    "code": "Digit4",
-    "clean": ["4", "4"],
+    "code": "Digit5",
+    "clean": ["5", "5"],
     "altKey": ["¡", "!"],
     "ctrlKey": ["1", "1"],
     "metaKey": ["1", "1"],
-    "shiftKey": ["!", "!"]
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Digit6",
+    "clean": ["6", "6"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Digit7",
+    "clean": ["7", "7"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Digit8",
+    "clean": ["8", "8"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Digit9",
+    "clean": ["9", "9"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Digit0",
+    "clean": ["0", "0"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Minus",
+    "clean": ["-", "-"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Equal",
+    "clean": ["=", "="],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key",
+    "action": "add"
+  },
+  {
+    "row": 0,
+    "code": "Backspace",
+    "clean": ["Backspace", "Backspace"],
+    "altKey": ["¡", "!"],
+    "ctrlKey": ["1", "1"],
+    "metaKey": ["1", "1"],
+    "shiftKey": ["!", "!"],
+    "style": "key backspace",
+    "action": "backspace"
   }
 ]

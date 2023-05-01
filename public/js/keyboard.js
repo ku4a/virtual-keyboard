@@ -26,7 +26,7 @@ export class Keyboard {
 
                         let keyboard_key = document.createElement('div');
                         keyboard_key.innerHTML = item.clean[LANG];
-                        keyboard_key.className = "key";
+                        keyboard_key.className = item.style;
                         keyboard_key.dataset.code = item.code;
 
                         keyboard_row.append(keyboard_key);
@@ -51,7 +51,15 @@ export class Keyboard {
        //console.log(this.symbols.find(el => el.code === code));
 
         let symbol = this.symbols.find(el => el.code === code);
-        return symbol ? symbol.clean[this.lang] : false;
+        return symbol ? symbol : false;
+    }
+
+    getAction(code) {
+        //console.log(code);
+        //console.log(this.symbols.find(el => el.code === code));
+
+        let symbol = this.symbols.find(el => el.code === code);
+        return symbol ? symbol.action : false;
     }
 
     animationAdd(code) {
@@ -60,6 +68,33 @@ export class Keyboard {
 
     animationRemove(code) {
         document.querySelector("[data-code = '" + code + "']").classList.remove("active");
+    }
+
+    actionBackspace(textbox)
+    {
+        let ss = textbox.selectionStart;
+        let se = textbox.selectionEnd;
+        let ln  = textbox.value.length;
+
+        let textbefore = textbox.value.substring( 0, ss );    //text in front of selected text
+        let textselected = textbox.value.substring( ss, se ); //selected text
+        let textafter = textbox.value.substring( se, ln );    //text following selected text
+
+        if(ss === se) // if no text is selected
+        {
+            textbox.value = textbox.value.substring(0, ss-1 ) + textbox.value.substring(se, ln );
+            textbox.focus();
+            textbox.selectionStart = ss-1;
+            textbox.selectionEnd = ss-1;
+        }
+        else // if some text is selected
+        {
+            textbox.value = textbefore + textafter ;
+            textbox.focus();
+            textbox.selectionStart = ss;
+            textbox.selectionEnd = ss;
+        }
+
     }
 
 }

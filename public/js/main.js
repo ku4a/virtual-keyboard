@@ -8,7 +8,11 @@ document.addEventListener("keydown", function (event) {
     //console.log("event.code = " + event.code);
 
     if (keyboard.getSymbol(event.code)) {
-        screen.addSymbol(keyboard.getSymbol(event.code));
+        event.preventDefault();
+        //console.log(keyboard.getAction(event.code));
+
+        screen.action(keyboard.getSymbol(event.code));
+
         keyboard.animationAdd(event.code);
     }
 });
