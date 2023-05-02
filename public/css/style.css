@@ -82,7 +82,7 @@ body {
     border-radius: 50px
 }
 
-.keyboard .altleft, .keyboard .AltRight, .keyboard .arrowup, .keyboard .arrowleft, .keyboard .Arrowdown, .keyboard .arrowright, .keyboard .backspace, .keyboard .capsLock, .keyboard .controlleft, .keyboard .controlright, .keyboard .delete, .keyboard .enter, .keyboard .shiftleft, .keyboard .shiftright, .keyboard .tab, .keyboard .metaleft, .keyboard .metaright {
+.keyboard .altleft, .keyboard .AltRight, .keyboard .arrowup, .keyboard .arrowleft, .keyboard .arrowdown, .keyboard .arrowright, .keyboard .backspace, .keyboard .capsLock, .keyboard .controlleft, .keyboard .controlright, .keyboard .delete, .keyboard .enter, .keyboard .shiftleft, .keyboard .shiftright, .keyboard .tab, .keyboard .metaleft, .keyboard .metaright {
     font-weight: 600;
     background-color: #222222
 }
