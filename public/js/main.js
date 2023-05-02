@@ -4,6 +4,16 @@ import {Keyboard} from './keyboard.js';
 let screen = new Screen;
 let keyboard = new Keyboard;
 
+let page_os = document.createElement('div');
+page_os.className = "description";
+page_os.innerHTML = "Клавиатура создана в операционной системе Mac Os";
+document.body.append(page_os);
+
+let page_lang = document.createElement('div');
+page_lang.className = "language";
+page_lang.innerHTML = "Для переключения языка комбинация: shift + ctrl";
+document.body.append(page_lang);
+
 document.querySelector(".keyboard").addEventListener("mousedown", function (event) {
     let symbol = keyboard.getSymbol(event.target.dataset.code);
 
