@@ -4,6 +4,16 @@ import {Keyboard} from './keyboard.js';
 let screen = new Screen;
 let keyboard = new Keyboard;
 
+let page_os = document.createElement('div');
+page_os.className = "description";
+page_os.innerHTML = "Операционная система MacOs";
+document.body.append(page_os);
+
+let page_lang = document.createElement('div');
+page_lang.className = "language";
+page_lang.innerHTML = "Переключения языка: shift + ctrl";
+document.body.append(page_lang);
+
 document.querySelector(".keyboard").addEventListener("mousedown", function (event) {
     let symbol = keyboard.getSymbol(event.target.dataset.code);
 
@@ -91,29 +101,22 @@ document.querySelector(".keyboard").addEventListener("mousedown", function (even
     }
 
 });
-
 document.querySelector(".keyboard").addEventListener("mouseup", function (event) {
-
     let symbol = keyboard.getSymbol(event.target.dataset.code);
-
     if (symbol) {
         keyboard.animationRemove(event.target.dataset.code);
     }
-
 });
 
 document.querySelector(".keyboard").addEventListener("mouseout", function (event) {
     let symbol = keyboard.getSymbol(event.target.dataset.code);
-
     if (symbol) {
         keyboard.animationRemove(event.target.dataset.code);
     }
-
 });
 
 document.addEventListener("keydown", function (event) {
     let symbol = keyboard.getSymbol(event.code);
-
     if (symbol) {
         event.preventDefault();
 
@@ -199,9 +202,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 document.addEventListener("keyup", function (event) {
-
     let symbol = keyboard.getSymbol(event.code);
-
     if (symbol) {
         switch (symbol.action) {
             case "capslock":
@@ -239,8 +240,6 @@ document.addEventListener("keyup", function (event) {
             default:
                 break;
         }
-
-
         keyboard.animationRemove(event.code);
     }
 });
