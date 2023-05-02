@@ -49,37 +49,39 @@ export default class Keyboard {
 
   animationAdd(code) {
     this.modEslint = 1;
-    /* eslint-disable-next-line */
-    document.querySelector("[data-code = '" + code + "']").classList.add('active');
+    document.querySelector(`[data-code = '${code}']`).classList.add('active');
   }
 
   animationRemove(code) {
     this.modEslint = 1;
-    /* eslint-disable-next-line */
-    document.querySelector("[data-code = '" + code + "']").classList.remove('active');
+    document.querySelector(`[data-code = '${code}']`).classList.remove('active');
   }
 
   refresh() {
     const keys = document.querySelectorAll('.normal');
+    const modeLang = parseInt(this.lang, 10);
+    const modeCapslock = this.modCapslock;
+    const modeShift = this.modShift;
+    const modeCtrl = this.modCtrl;
+    const modeAlt = this.modAlt;
+    const modeSymbols = this.symbols;
     let keyJson = '';
     let keyDiv = {};
 
-    /* eslint-disable-next-line */
-    for (const key of keys) {
-      keyJson = this.symbols.find((el) => el.code === key.dataset.code);
-      /* eslint-disable-next-line */
-      keyDiv = document.querySelector("[data-code = '" + key.dataset.code + "']");
+    keys.forEach((key) => {
+      keyJson = modeSymbols.find((el) => el.code === key.dataset.code);
+      keyDiv = document.querySelector(`[data-code = '${key.dataset.code}']`);
 
-      if (this.modShift || this.modCapslock) {
-        keyDiv.innerHTML = keyJson.shiftKey[this.lang];
-      } else if (this.modCtrl) {
-        keyDiv.innerHTML = keyJson.ctrlKey[this.lang];
-      } else if (this.modAlt) {
-        keyDiv.innerHTML = keyJson.altKey[this.lang];
+      if (modeShift || modeCapslock) {
+        keyDiv.innerHTML = keyJson.shiftKey[modeLang];
+      } else if (modeCtrl) {
+        keyDiv.innerHTML = keyJson.ctrlKey[modeLang];
+      } else if (modeAlt) {
+        keyDiv.innerHTML = keyJson.altKey[modeLang];
       } else {
-        keyDiv.innerHTML = keyJson.clean[this.lang];
+        keyDiv.innerHTML = keyJson.clean[modeLang];
       }
-    }
+    });
   }
 
   getModCapslock() {
