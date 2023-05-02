@@ -115,6 +115,11 @@ document.querySelector('.keyboard').addEventListener('mouseup', (event) => {
       keyboard.animationRemove(event.target.dataset.code);
     }
   }
+
+  keyboard.modShift = 0;
+  keyboard.modCtrl = 0;
+  keyboard.modAlt = 0;
+  keyboard.modMeta = 0;
   keyboard.refresh();
 });
 
