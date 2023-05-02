@@ -69,13 +69,13 @@ export class Keyboard {
     }
 
     refresh() {
-        //console.log("refresh");
+
         let keys = document.querySelectorAll(".normal");
         let keyJson = '';
         let keyDiv = {};
 
         for (let key of keys) {
-            //console.log(key.dataset.code + ' = ' + this.symbols.find(el => el.code === key.dataset.code).shiftKey[0]);
+
 
             keyJson = this.symbols.find(el => el.code === key.dataset.code);
             keyDiv = document.querySelector("[data-code = '" + key.dataset.code + "']");
@@ -89,7 +89,7 @@ export class Keyboard {
                 //console.log('alt')
                 keyDiv.innerHTML = keyJson.altKey[this.lang]
             } else {
-                console.log(keyJson.clean[this.lang]);
+
                 keyDiv.innerHTML = keyJson.clean[this.lang]
             }
 
