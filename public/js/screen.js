@@ -1,7 +1,5 @@
 export class Screen {
-
     constructor() {
-        //console.log("Screen");
         let textarea = document.createElement('textarea');
         textarea.className = "screen";
         textarea.setAttribute("rows", 5);
@@ -13,7 +11,6 @@ export class Screen {
 
 
     actionAdd(symbol) {
-        //console.log(symbol);
         document.querySelector(".screen").value += symbol;
     }
 
@@ -43,8 +40,6 @@ export class Screen {
     }
 
     actionDelete() {
-        console.log("delete");
-
         let screen = document.querySelector(".screen");
         let ss = screen.selectionStart;
         let se = screen.selectionEnd;

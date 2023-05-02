@@ -568,7 +568,7 @@
     "ctrlKey": ["/", "."],
     "metaKey": ["/", "."],
     "shiftKey": ["?", ","],
-    "style": "key",
+    "style": "key  normal",
     "action": "add"
   },
   {

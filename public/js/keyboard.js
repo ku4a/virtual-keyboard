@@ -31,8 +31,6 @@ export class Keyboard {
 
                 symbols.forEach(function (item) {
                     if (item.row === i) {
-                        //console.log(item.code);
-                        //console.log("lang = " + LANG);
                         let keyboard_key = document.createElement('div');
                         keyboard_key.innerHTML = item.clean[LANG];
                         keyboard_key.className = item.style;
@@ -52,9 +50,6 @@ export class Keyboard {
 
 
     getSymbol(code) {
-        //console.log(code);
-        //console.log(this.symbols.find(el => el.code === code));
-
         let symbol = this.symbols.find(el => el.code === code);
         return symbol ? symbol : false;
     }
@@ -83,10 +78,8 @@ export class Keyboard {
             if (this.modShift || this.modCapslock) {
                 keyDiv.innerHTML = keyJson.shiftKey[this.lang]
             } else if (this.modCtrl) {
-                //console.log('Ctrl')
                 keyDiv.innerHTML = keyJson.ctrlKey[this.lang]
             } else if (this.modAlt) {
-                //console.log('alt')
                 keyDiv.innerHTML = keyJson.altKey[this.lang]
             } else {
 
@@ -125,14 +118,11 @@ export class Keyboard {
     }
 
     switchLang(){
-        //this.lang === 0 ? this.lang = 1 : this.lang = 0;
         if (parseInt(this.lang) === 0) {
             this.lang = 1;
         } else {
             this.lang = 0;
         }
-        //console.log("switch lang = " + this.lang);
         localStorage.setItem("lang", this.lang);
-        //console.log(localStorage.getItem('lang'));
     }
 }

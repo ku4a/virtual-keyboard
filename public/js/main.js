@@ -4,20 +4,11 @@ import {Keyboard} from './keyboard.js';
 let screen = new Screen;
 let keyboard = new Keyboard;
 
-//console.log("initial lang = " + keyboard.getLang());
-
-//keyboard.switchLang();
-
-//console.log("switch lang = " + keyboard.getLang());
-
 document.querySelector(".keyboard").addEventListener("mousedown", function (event) {
-    console.log("click = " + event.target.dataset.code);
     let symbol = keyboard.getSymbol(event.target.dataset.code);
 
     if (symbol) {
         event.preventDefault();
-        //console.log(symbol.action);
-
 
         switch (symbol.action) {
             case "add":
@@ -102,7 +93,7 @@ document.querySelector(".keyboard").addEventListener("mousedown", function (even
 });
 
 document.querySelector(".keyboard").addEventListener("mouseup", function (event) {
-    //console.log("click = " + event.target.dataset.code);
+
     let symbol = keyboard.getSymbol(event.target.dataset.code);
 
     if (symbol) {
@@ -112,7 +103,6 @@ document.querySelector(".keyboard").addEventListener("mouseup", function (event)
 });
 
 document.querySelector(".keyboard").addEventListener("mouseout", function (event) {
-    //console.log("click = " + event.target.dataset.code);
     let symbol = keyboard.getSymbol(event.target.dataset.code);
 
     if (symbol) {
@@ -122,14 +112,10 @@ document.querySelector(".keyboard").addEventListener("mouseout", function (event
 });
 
 document.addEventListener("keydown", function (event) {
-    //console.log("event.code = " + event.code);
-
     let symbol = keyboard.getSymbol(event.code);
 
     if (symbol) {
         event.preventDefault();
-        //console.log(symbol.action);
-
 
         switch (symbol.action) {
             case "add":
