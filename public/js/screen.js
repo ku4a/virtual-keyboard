@@ -110,7 +110,7 @@ export default class Screen {
     const tab = '    ';
 
     screen.value = screen.value.substring(0, start) + tab + screen.value.substring(end);
-        screen.selectionStart = start + 4;
+    screen.selectionStart = start + 4;
     screen.selectionEnd = start + 4;
   }
 }
