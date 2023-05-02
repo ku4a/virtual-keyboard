@@ -1,20 +1,20 @@
-import {Screen} from './screen.js';
-import {Keyboard} from './keyboard.js';
+import { Screen } from './screen.js';
+import { Keyboard } from './keyboard.js';
 
-let screen = new Screen;
-let keyboard = new Keyboard;
+const screen = new Screen;
+const keyboard = new Keyboard;
 
-let page_os = document.createElement('div');
-page_os.className = "description";
-page_os.innerHTML = "Операционная система MacOs";
-document.body.append(page_os);
+const pageOs = document.createElement('div');
+pageOs.className = 'description';
+pageOs.innerHTML = 'Операционная система MacOs';
+document.body.append(pageOs);
 
-let page_lang = document.createElement('div');
-page_lang.className = "language";
-page_lang.innerHTML = "Переключения языка: shift + ctrl";
-document.body.append(page_lang);
+const pageLang = document.createElement('div');
+pageLang.className = 'language';
+pageLang.innerHTML = 'Переключения языка: shift + ctrl';
+document.body.append(pageLang);
 
-document.querySelector(".keyboard").addEventListener("mousedown", function (event) {
+document.querySelector('.keyboard').addEventListener('mousedown', function (event) {
     let symbol = keyboard.getSymbol(event.target.dataset.code);
 
     if (symbol) {
