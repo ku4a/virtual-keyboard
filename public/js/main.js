@@ -14,6 +14,26 @@ pageLang.className = 'language';
 pageLang.innerHTML = 'Переключения языка: shift + ctrl';
 document.body.append(pageLang);
 
+function listenShiftKey(e) {
+  const evt = e || window.event;
+  return evt.shiftKey;
+}
+
+function listenAltKey(e) {
+  const evt = e || window.event;
+  return evt.altKey;
+}
+
+function listenCtrlKey(e) {
+  const evt = e || window.event;
+  return evt.ctrlKey;
+}
+
+function listenMetaKey(e) {
+  const evt = e || window.event;
+  return evt.metaKey;
+}
+
 document.querySelector('.keyboard').addEventListener('mousedown', (event) => {
   const symbol = keyboard.getSymbol(event.target.dataset.code);
 
@@ -116,10 +136,21 @@ document.querySelector('.keyboard').addEventListener('mouseup', (event) => {
     }
   }
 
-  keyboard.modShift = 0;
-  keyboard.modCtrl = 0;
-  keyboard.modAlt = 0;
-  keyboard.modMeta = 0;
+  if (!listenShiftKey()) {
+    keyboard.modShift = 0;
+  }
+
+  if (!listenCtrlKey()) {
+    keyboard.modCtrl = 0;
+  }
+
+  if (!listenAltKey()) {
+    keyboard.modAlt = 0;
+  }
+
+  if (!listenMetaKey()) {
+    keyboard.modMeta = 0;
+  }
   keyboard.refresh();
 });
 
