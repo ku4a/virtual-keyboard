@@ -4,15 +4,20 @@ import Keyboard from './keyboard.js';
 const screen = new Screen();
 const keyboard = new Keyboard();
 
-const pageOs = document.createElement('div');
-pageOs.className = 'description';
-pageOs.innerHTML = 'Операционная система MacOs';
-document.body.append(pageOs);
+const pagePs = document.createElement('div');
+pagePs.className = 'description';
+pagePs.innerHTML = 'CapsLock работает на Mac и PC по-разному.';
+document.body.append(pagePs);
 
 const pageLang = document.createElement('div');
 pageLang.className = 'language';
-pageLang.innerHTML = 'Переключения языка: shift + ctrl';
+pageLang.innerHTML = 'Переключения языка: shift + ctrl.';
 document.body.append(pageLang);
+
+const pageOs = document.createElement('div');
+pageOs.className = 'language';
+pageOs.innerHTML = 'Операционная система MacOS.';
+document.body.append(pageOs);
 
 function listenShiftKey(e) {
   const evt = e || window.event;
