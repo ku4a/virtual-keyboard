@@ -44,7 +44,11 @@ document.querySelector(".keyboard").addEventListener("mousedown", function (even
                 screen.actionDelete();
                 break;
             case "capslock":
-                keyboard.modCapslock = 1;
+                if (keyboard.modCapslock === 0) {
+                    keyboard.modCapslock = 1;
+                } else {
+                    keyboard.modCapslock = 0;
+                }
                 keyboard.refresh();
                 break;
             case "shiftLeft":
@@ -103,15 +107,30 @@ document.querySelector(".keyboard").addEventListener("mousedown", function (even
 });
 document.querySelector(".keyboard").addEventListener("mouseup", function (event) {
     let symbol = keyboard.getSymbol(event.target.dataset.code);
+
     if (symbol) {
-        keyboard.animationRemove(event.target.dataset.code);
+        if (event.target.dataset.code !== "CapsLock") {
+            keyboard.animationRemove(event.target.dataset.code);
+        } else if (!keyboard.modCapslock) {
+            keyboard.animationRemove(event.target.dataset.code);
+        }
     }
+
+    keyboard.modShift = 0;
+    keyboard.modCtrl = 0;
+    keyboard.modAlt = 0;
+    keyboard.modMeta = 0;
+    keyboard.refresh();
 });
 
 document.querySelector(".keyboard").addEventListener("mouseout", function (event) {
     let symbol = keyboard.getSymbol(event.target.dataset.code);
     if (symbol) {
-        keyboard.animationRemove(event.target.dataset.code);
+        if (event.target.dataset.code !== "CapsLock") {
+            keyboard.animationRemove(event.target.dataset.code);
+        } else if (!keyboard.modCapslock) {
+            keyboard.animationRemove(event.target.dataset.code);
+        }
     }
 });
 

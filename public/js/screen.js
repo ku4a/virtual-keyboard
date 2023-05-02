@@ -5,6 +5,9 @@ export class Screen {
         textarea.setAttribute("rows", 5);
         textarea.setAttribute("cols", 50);
         textarea.innerHTML = "Hello, world!";
+        textarea.focus();
+        textarea.selectionStart = 13;
+        textarea.selectionEnd = 13;
         document.body.append(textarea);
     }
 
