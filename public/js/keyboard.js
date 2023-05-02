@@ -42,10 +42,7 @@ export class Keyboard {
             }
 
         })
-
-
         document.body.append(keyboard);
-        //this.name = name;
     }
 
 

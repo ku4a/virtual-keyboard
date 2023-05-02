@@ -4,9 +4,8 @@ export class Screen {
         textarea.className = "screen";
         textarea.setAttribute("rows", 5);
         textarea.setAttribute("cols", 50);
+        textarea.innerHTML = "Hello, world!";
         document.body.append(textarea);
-        //this.addSymbol("z");
-        //this.name = name;
     }
 
 
