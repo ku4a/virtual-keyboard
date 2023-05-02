@@ -27,7 +27,7 @@ body {
 }
 
 .hidden {
-    display: none
+    display: none;
 }
 
 .description, .language, .title {
@@ -55,14 +55,14 @@ body {
     padding-bottom: 0;
     background: #cbced7;
     border: 3px solid #cbced7;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .keyboard .row {
     clear: both;
     width: 100%;
     height: 40px;
-    margin-bottom: 8px
+    margin-bottom: 8px;
 }
 
 .keyboard .key {
@@ -78,16 +78,16 @@ body {
     border-radius: 3px;
     cursor: pointer;
     user-select: none;
-    transition: border-radius 0.3s, background-color 0.3s
+    transition: border-radius 0.3s, background-color 0.3s;
 }
 
 .keyboard .key:hover {
-    background: #79aa89
+    background: #919191;
 }
 
 .keyboard .key.active {
     background-color: #919191;
-    border-radius: 25px
+    border-radius: 25px;
 }
 
 .keyboard .altleft, .keyboard .AltRight, .keyboard .arrowup, .keyboard .arrowleft, .keyboard .arrowdown, .keyboard .arrowright, .keyboard .backspace, .keyboard .capsLock, .keyboard .controlleft, .keyboard .controlright, .keyboard .delete, .keyboard .enter, .keyboard .shiftleft, .keyboard .shiftright, .keyboard .tab, .keyboard .metaleft, .keyboard .metaright {
@@ -96,21 +96,21 @@ body {
 }
 
 .keyboard .tab {
-    width: 50px
+    width: 50px;
 }
 
 .keyboard .backspace, .keyboard .capsLock, .keyboard .ShiftLeft {
-    width: 100px
+    width: 100px;
 }
 
 .keyboard .delete {
-    width: 90px
+    width: 90px;
 }
 
 .keyboard .enter, .keyboard .shiftright {
-    width: 86px
+    width: 86px;
 }
 
 .keyboard .space {
-    width: 330px
+    width: 330px;
 }

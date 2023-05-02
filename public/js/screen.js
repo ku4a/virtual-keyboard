@@ -8,9 +8,28 @@ export class Screen {
         document.body.append(textarea);
     }
 
-
     actionAdd(symbol) {
-        document.querySelector(".screen").value += symbol;
+        //document.querySelector(".screen").value += symbol;
+        let screen = document.querySelector(".screen");
+        let ss = screen.selectionStart;
+        let se = screen.selectionEnd;
+        let ln = screen.value.length;
+        let textBefore = screen.value.substring(0, ss);    //text in front of selected text
+        let textAfter = screen.value.substring(se, ln);    //text following selected text
+
+        if (ss === se) // if no text is selected
+        {
+            screen.value = screen.value.substring(0, ss) + symbol + screen.value.substring(se, ln);
+            screen.focus();
+            screen.selectionStart = ss + 1;
+            screen.selectionEnd = ss + 1;
+        } else // if some text is selected
+        {
+            screen.value = textBefore + symbol + textAfter;
+            screen.focus();
+            screen.selectionStart = ss;
+            screen.selectionEnd = ss;
+        }
     }
 
     actionBackspace() {
@@ -18,9 +37,7 @@ export class Screen {
         let ss = screen.selectionStart;
         let se = screen.selectionEnd;
         let ln = screen.value.length;
-
         let textBefore = screen.value.substring(0, ss);    //text in front of selected text
-        let textSelected = screen.value.substring(ss, se); //selected text
         let textAfter = screen.value.substring(se, ln);    //text following selected text
 
         if (ss === se) // if no text is selected
@@ -43,9 +60,7 @@ export class Screen {
         let ss = screen.selectionStart;
         let se = screen.selectionEnd;
         let ln = screen.value.length;
-
         let textBefore = screen.value.substring(0, ss);    //text in front of selected text
-        let textSelected = screen.value.substring(ss, se); //selected text
         let textAfter = screen.value.substring(se, ln);    //text following selected text
 
         if (ss === se) // if no text is selected
@@ -64,12 +79,31 @@ export class Screen {
     }
 
     actionEnter() {
-        document.querySelector(".screen").value += "\r\n";
+        //document.querySelector(".screen").value += "\r\n";
+        let screen = document.querySelector(".screen");
+        let ss = screen.selectionStart;
+        let se = screen.selectionEnd;
+        let ln = screen.value.length;
+        let textBefore = screen.value.substring(0, ss);    //text in front of selected text
+        let textAfter = screen.value.substring(se, ln);    //text following selected text
+
+        if (ss === se) // if no text is selected
+        {
+            screen.value = screen.value.substring(0, ss) + "\r\n" + screen.value.substring(se, ln);
+            screen.focus();
+            screen.selectionStart = ss + 1;
+            screen.selectionEnd = ss + 1;
+        } else // if some text is selected
+        {
+            screen.value = textBefore + "\r\n" + textAfter;
+            screen.focus();
+            screen.selectionStart = ss;
+            screen.selectionEnd = ss;
+        }
     }
 
     actionTab() {
         let screen = document.querySelector(".screen");
-
         let start = screen.selectionStart;
         let end = screen.selectionEnd;
 

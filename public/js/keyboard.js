@@ -1,28 +1,19 @@
 export class Keyboard {
     lang = localStorage.getItem('lang') === null ? 0 : localStorage.getItem('lang');
     symbols = [];
-
     modCapslock = 0;
     modShift = 0;
     modCtrl = 0;
     modMeta = 0;
     modAlt = 0;
 
-
-
     constructor() {
         const LANG = parseInt(this.lang);
-
-
-
         let keyboard = document.createElement('div');
         keyboard.className = "keyboard";
         keyboard.setAttribute("id", "keyboard");
-
         fetch('public/json/mac-keabord.json').then(res => res.json()).then(symbols => {
-
             this.symbols = symbols;
-
             for (let i = 0; i < 5; i++) {
 
                 let keyboard_row = document.createElement('div');
@@ -40,17 +31,14 @@ export class Keyboard {
                     }
                 });
             }
-
         })
         document.body.append(keyboard);
     }
-
 
     getSymbol(code) {
         let symbol = this.symbols.find(el => el.code === code);
         return symbol ? symbol : false;
     }
-
 
     animationAdd(code) {
         document.querySelector("[data-code = '" + code + "']").classList.add("active");
@@ -61,14 +49,11 @@ export class Keyboard {
     }
 
     refresh() {
-
         let keys = document.querySelectorAll(".normal");
         let keyJson = '';
         let keyDiv = {};
 
         for (let key of keys) {
-
-
             keyJson = this.symbols.find(el => el.code === key.dataset.code);
             keyDiv = document.querySelector("[data-code = '" + key.dataset.code + "']");
 
@@ -82,13 +67,7 @@ export class Keyboard {
 
                 keyDiv.innerHTML = keyJson.clean[this.lang]
             }
-
         }
-
-    }
-
-    getModShift() {
-        return this.modShift;
     }
 
     getModCapslock() {
